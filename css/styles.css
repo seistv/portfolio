@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../img/iced-coffee-bg.jpg') center/cover;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero h1, .hero p {
+    margin: 0;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .navbar {
+    background-color: #1a1a1a !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Card Styling */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: #212529;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode - Card */
+.dark-mode .card {
+    background-color: #333;
+    color: white;
+}
+
+/* Buttons */
+.btn {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Dark Mode Footer */
+.dark-mode footer {
+    background-color: #1a1a1a;
+}
+
+/* Ensure dark mode toggle button is always visible */
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000; /* Ensures it's always on top */
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #212529;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+/* Fix Footer Position */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
