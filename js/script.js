@@ -11,19 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Toggle Dark Mode
     themeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-            themeIcon.classList.replace("bi-moon", "bi-sun");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-            themeIcon.classList.replace("bi-sun", "bi-moon");
-        }
+        const isDarkMode = body.classList.toggle("dark-mode");
+        localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
+        themeIcon.classList.replace(isDarkMode ? "bi-moon" : "bi-sun", isDarkMode ? "bi-sun" : "bi-moon");
     });
 
     // Smooth scrolling for navigation links
-    document.querySelectorAll("a[href^='#']").forEach(anchor => {
+    document.querySelectorAll("nav a[href^='#']").forEach(anchor => {
         anchor.addEventListener("click", function (event) {
             event.preventDefault();
             const targetId = this.getAttribute("href").substring(1);

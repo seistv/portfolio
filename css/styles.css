@@ -78,26 +78,6 @@ footer {
     margin-top: auto;
 }
 
-/* Dark Mode Footer */
-.dark-mode footer {
-    background-color: #1a1a1a;
-}
-
-/* Ensure dark mode toggle button is always visible */
-#dark-mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #ffffff;
-    color: #212529;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    z-index: 1000; /* Ensures it's always on top */
-}
-
 .dark-mode #dark-mode-toggle {
     background-color: #212529;
     color: #ffffff;
@@ -109,14 +89,4 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
 }
